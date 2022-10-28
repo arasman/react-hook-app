@@ -6,6 +6,7 @@ import { FormWithCustomHook } from './02-useEfect/FormWithCustomHook'
 import { SimpleForm } from './02-useEfect/SimpleForm'
 import { MultipleCustomHooks } from './03-examples/MultipleCustomHooks'
 import { FocuesScreen } from './04-useRef/FocuesScreen'
+import { Layout } from './05-useLayoutEfect/Layout'
 import { HooksApp } from './HooksApp'
 import './index.css'
 
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <SimpleForm/> */}
     {/* <FormWithCustomHook/> */}
     {/* <MultipleCustomHooks/> */}
-    <FocuesScreen/>
+    {/* <FocuesScreen/> */}
+    <Layout/>
   </React.StrictMode>
 )
