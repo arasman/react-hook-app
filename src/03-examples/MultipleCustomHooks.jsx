@@ -1,13 +1,14 @@
 import { useFetch } from "../hooks/useFetch";
+import { useCounter} from "../hooks/useCounter";
+import { useEffect } from "react";
 
 export const MultipleCustomHooks = () => {
+  const {counter, increment} = useCounter(1); 
   const { data, isLoading, hasError } = useFetch(
-    "https://www.breakingbadapi.com/api/quotes/1"
+    `https://www.breakingbadapi.com/api/quotes/${counter}`
   );
 
     const {author, quote} = !!data && data[0]; //data = undefined --> !data = true --> !!data = false when is undefined and true when there is data
-    console.log(author, quote);
-
 //   console.log(data, isLoading, hasError);
 
   // if(isLoading)
@@ -28,7 +29,7 @@ export const MultipleCustomHooks = () => {
         </blockquote>
       )}
 
-      <button className="btn btn-primary">
+      <button className="btn btn-primary" onClick={() => increment(1)} disabled={isLoading}>
         Next quote
       </button>
     </>
