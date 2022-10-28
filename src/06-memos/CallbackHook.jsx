@@ -15,7 +15,7 @@ export const CallbackHook = () => {
     )
     
       useEffect(() => {
-        incrementFather();
+        //incrementFather();
       }, []); //if there is like [incrementFather], in this case the method of incrementFather always be a different (different memo position) making an infinite loop by useEffect
       
     // const incrementFather = () => {
