@@ -5,7 +5,7 @@ export const ShowIncrement = ({increment}) => {
   return (
     <button
     className='btn btn-primary'
-    onClick={() => increment()}
+    onClick={() => increment(5)}  //(5) = (incrementValue) as argument of the useCallback function useCallBack((incrementValue) => {...}, [])
     >Increment</button>
   )
 }
