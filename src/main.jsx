@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom';
 import { CounterApp } from './01-useState/Counterapp'
 import { CounterWithCustomHook } from './01-useState/CounterWithCustomHook'
 import { FormWithCustomHook } from './02-useEfect/FormWithCustomHook'
@@ -18,8 +19,9 @@ import { TodoApp } from './08-useReducer/TodoApp'
 import { MainApp } from './09-UseContext/MainApp'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-//   <React.StrictMode>
-    <>
+    <BrowserRouter>
+   {/* <React.StrictMode> */}
+    {/* <> */}
     {/* <HooksApp /> */}
     {/* <CounterApp/> */}
     {/* <CounterWithCustomHook/> */}
@@ -34,6 +36,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <Padre/> */}
     {/* <TodoApp/> */}
     <MainApp/>
-    </>
-//   </React.StrictMode>
+    {/* </> */}
+   {/* </React.StrictMode> */}
+   </BrowserRouter>
 )
